@@ -4,8 +4,14 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-<h:head></h:head>
+<head>
+    <title>Inicio de sesion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
 <body>
+    <div id="wrapper">
 	<h:form>
 				
 		<h1>Iniciar Sesión</h1>
@@ -23,5 +29,11 @@
 			<h:commandButton value="Iniciar" action="#{usuarioBean.verificarDatos()}" />
 		</h:panelGrid>
 	</h:form>
+        
+        <footer id="footer">
+            <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+        </footer>
+        
+    </div>
 </body>
 </html>

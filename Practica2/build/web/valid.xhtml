@@ -3,21 +3,26 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
-<link rel="stylesheet" type="text/css" href="style.css"/>
 
-<h:head></h:head>
+<head>
+    <title>Pagina de inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
 <body>
+    <div id="wrapper">
 	<h:outputLabel value="Acceso denegado (Permisos insuficientes)" rendered="#{usuarioBean.verificarSesion() eq false}" />
         
 	<h:form rendered="#{usuarioBean.verificarSesion()}">
             <h:panelGrid columns="">
-                <h:outputLabel value="Hola, que tal? | #{usuarioBean.usuario.nombreusuario} |"/>
-                <a href="extra.xhtml">Pagina extra</a>
+                <h:outputLabel value="Hola!, que tal | #{usuarioBean.usuario.nombreusuario} |?"/>
+                <h1> <a href="extra.xhtml">(Pagina extra)</a> </h1>
                 
                 <h:commandButton value="Cerrar Sesión" action="#{usuarioBean.cerrarSesion()}"/>
                 
             </h:panelGrid>		
 	</h:form>
+    </div>
 </body>
 </html>
