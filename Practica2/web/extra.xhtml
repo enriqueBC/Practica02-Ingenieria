@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <h:head></h:head>
+    
+    <body>
+        <h:outputLabel value="Acceso denegado (Permisos insuficientes)" rendered="#{usuarioBean.verificarSesion() eq false}" />
+        
+	<h:form rendered="#{usuarioBean.verificarSesion()}">
+		<h:panelGrid columns="1">
+                        <h:outputLabel value="| #{usuarioBean.usuario.nombreusuario} |, te gusta esta cancion? :3"/>                       
+                        <div class="row"> <audio
+                                     src="http://f.cl.ly/items/1N410s1v3T3O0Z022q1t/Melody%20of%20Water%20is%20the%20Guide%20in%20Spiritual%20Mist.mp3"
+                                     controls ="loop">
+                                        <p>El navegador no soporta audio empotrable.</p>
+                                    </audio>
+                        </div>                        
+                        <img src="Images/waterfall.jpg"/> <br></br>
+                        <h:commandButton value="Cerrar Sesión" action="#{usuarioBean.cerrarSesion()}"/>
+		</h:panelGrid>		
+	</h:form>
+    </body>
+    
+</html>

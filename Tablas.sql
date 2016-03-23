@@ -16,3 +16,6 @@ CREATE TABLE comentario (
 	correo 			VARCHAR(200) PRIMARY KEY REFERENCES Usuario(correo),
 	contenido 		VARCHAR(200)
 );
+
+--Unicamente para probar el acceso al sistema
+INSERT INTO usuario VALUES ('usuario@gmail.com','usuario','contrasena');
